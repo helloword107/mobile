@@ -1,0 +1,10 @@
+用isScroll.js做了一个产品分类页面，在手机预览的时候，分类TAB点击事件没法触发，google一下之后在发现，原来isScroll.js阻止了页面的点击事件，解决办法如下
+初始化isScroll.js对象的时候将click初始化为true，代码如下：
+
+var myScroll01 = new IScroll('#categroy-cnt', { 
+    bounceEasing: 'elastic', 
+    bounceTime: 1200,
+    mouseWheel: true, 
+    click: true,  // 开启点击事件
+    tap: true     // 开启点击事件
+});
